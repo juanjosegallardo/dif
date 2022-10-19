@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>rutas</ion-title>
+    <ion-title>Rutas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="abrirModalRuta()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let ruta of rutas">
+      <ion-label>
+        <h1>{{ruta.nombre}}</h1>
+        <p>{{ruta.tipo}}</p>
+      </ion-label>
+     </ion-item>
+  </ion-list>
 
 </ion-content>

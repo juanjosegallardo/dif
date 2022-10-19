@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ruta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="frmRuta">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tipo</ion-label>
+      <ion-input formControlName="tipo"></ion-input>
+    </ion-item>
+
+  </form>
+
+  <ion-footer>
+    <ion-button (click)="guardar()" [disabled]="frmRuta.invalid" expand="block">Guardar</ion-button>
+  </ion-footer>
+
+</ion-content>
