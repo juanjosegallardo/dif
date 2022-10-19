@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Persona</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="frmPersona">
+  <ion-item>
+   
+    <ion-input class="mayusculas" formControlName="curp"></ion-input>
+    <ion-button (click)="buscarCurp()"><ion-icon name="search"></ion-icon></ion-button>
+  </ion-item>
+  <ion-label color="danger" *ngIf="frmPersona.controls['curp'].invalid && frmPersona.controls['curp'].touched" >el CURP no es correcto</ion-label>
+  
+
+  <ion-item>
+    Estudiante
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input formControlName="nombre"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="frmPersona.controls['nombre'].invalid && frmPersona.controls['nombre'].touched" >el nombre no es correcto</ion-label>
+
+  <ion-item>
+    <ion-label position="floating">Apellido Paterno</ion-label>
+    <ion-input formControlName="ap_paterno"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="frmPersona.controls['ap_paterno'].invalid && frmPersona.controls['ap_paterno'].touched" >el Apellido no es correcto</ion-label>
+
+  <ion-item>
+    <ion-label position="floating">Apellido Materno</ion-label>
+    <ion-input formControlName="ap_materno"></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="frmPersona.controls['ap_materno'].invalid && frmPersona.controls['ap_materno'].touched" >el Apellido no es correcto</ion-label>
+
+
+  <ion-item>
+    <ion-label position="floating">Sexo</ion-label>
+    <ion-select formControlName="sexo">
+      <ion-select-option value="HOMBRE">Hombre</ion-select-option>
+      <ion-select-option value="MUJER">Mujer</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+
+  <ion-item>
+    <ion-label >Fecha Nacimiento:</ion-label>
+    <ion-input type="date" formControlName="fecha_nacimiento"></ion-input>
+  </ion-item> 
+    
+  <ion-item>
+    <ion-label >Vulnerabilidad:</ion-label>
+    <ion-input formControlName="vulnerabilidad"></ion-input>
+  </ion-item>
+
+
+
+  
+
+  <ion-item>
+    <ion-label position="floating">Calle</ion-label>
+    <ion-input formControlName="calle"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Numero</ion-label>
+    <ion-input formControlName="numero_exterior"></ion-input>
+  </ion-item>
+  
+  
+  <ion-item>
+    <ion-label position="floating">Colonia</ion-label>
+    <ion-input formControlName="colonia"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Manzana</ion-label>
+    <ion-input formControlName="manzana"></ion-input>
+  </ion-item>
+  
+
+  <ion-item>
+    <ion-label position="floating">CCT</ion-label>
+    <ion-input formControlName="cct"></ion-input>
+  </ion-item>
+  
+  
+</form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="guardar()" [disabled]="frmPersona.invalid" expand="block">Guardar</ion-button>
+</ion-footer>

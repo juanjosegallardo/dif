@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Padrón</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- fab placed to the top end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="abrirModalPersona()">
+
+        <ion-icon name="add"></ion-icon>
+
+      
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let persona of personas">
+      <ion-label>
+        <h1>{{persona.curp}}</h1>
+        <p>{{persona.ap_paterno}} {{persona.ap_materno}} {{persona.nombre}}</p>
+      </ion-label>
+     </ion-item>
+  </ion-list>
+
+</ion-content>
