@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Localidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="frmLocalidad">
+    <ion-item>
+      <ion-label position="floating">Id Interno</ion-label>
+      <ion-input formControlName="id_interno"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">clave</ion-label>
+      <ion-input formControlName="clave"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+    
+
+  </form>
+
+  <ion-footer>
+    <ion-button (click)="guardar()" [disabled]="frmLocalidad.invalid" expand="block">Guardar</ion-button>
+  </ion-footer>
+</ion-content>

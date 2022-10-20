@@ -12,12 +12,12 @@ export class RutaService {
 
 
   obtener()
-   {
+  {
     return this.http.get(`${environment.ruta_api}/rutas`);
-   }
+  }
 
    guardar(data: IRuta)
-   {
+  {
     return this.http.post(`${environment.ruta_api}/rutas`, data);
-   }
+  }
 }

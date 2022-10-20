@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'frm-ruta',
     loadChildren: () => import('./modals/frm-ruta/frm-ruta.module').then( m => m.FrmRutaPageModule)
+  },
+  {
+    path: 'frm-localidad',
+    loadChildren: () => import('./modals/frm-localidad/frm-localidad.module').then( m => m.FrmLocalidadPageModule)
   }
 ];
 

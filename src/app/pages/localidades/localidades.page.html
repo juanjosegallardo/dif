@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>localidades</ion-title>
+    <ion-title>Localidades</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="abrirModalLocalidad()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let localidad of localidades">
+      <ion-label>
+        <h1>{{localidad.nombre}}</h1>
+        <p>{{localidad.clave}}</p>
+      </ion-label>
+     </ion-item>
+  </ion-list>
 
 </ion-content>
