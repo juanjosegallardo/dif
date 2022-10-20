@@ -6,4 +6,19 @@
 
 <ion-content>
 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="abrirModalEscuela()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let escuela of escuelas">
+      <ion-label>
+        <h1>{{escuela.plantel}}</h1>
+        <p>{{escuela.cct}}</p>
+      </ion-label>
+     </ion-item>
+  </ion-list>
+
 </ion-content>

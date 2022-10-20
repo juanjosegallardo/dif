@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Escuela</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="frmEscuela">
+    <ion-item>
+      <ion-label position="floating">Nombre del plantel</ion-label>
+      <ion-input formControlName="plantel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Id Interno</ion-label>
+      <ion-input formControlName="id_interno"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Localidad</ion-label>
+      <ion-select formControlName="localidad_id">
+        <ion-select-option *ngFor="let localidad of localidades" value="{{localidad.id}}">
+          {{localidad.nombre}}
+        </ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Marginacion</ion-label>
+      <ion-select formControlName="marginacion">
+        <ion-select-option value="MUY BAJO">Muy Bajo</ion-select-option>
+        <ion-select-option value="BAJO">Bajo</ion-select-option>
+        <ion-select-option value="MEDIO">Medio</ion-select-option>
+        <ion-select-option value="ALTO">Alto</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">cct</ion-label>
+      <ion-input formControlName="cct"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nivel</ion-label>
+      <ion-select formControlName="nivel">
+        <ion-select-option value="PRESCOLAR">Prescolar</ion-select-option>
+        <ion-select-option value="PRIMARIA">Primaria</ion-select-option>
+        <ion-select-option value="SECUNDARIA">Secundaria</ion-select-option>
+        <ion-select-option value="PREPARATORIA">Preparatoria</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+
+  </form>
+
+  <ion-footer>
+    <ion-button (click)="guardarEscuela()" [disabled]="frmEscuela.invalid" expand="block">Guardar</ion-button>
+  </ion-footer>
+
+</ion-content>
