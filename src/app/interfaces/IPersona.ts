@@ -21,5 +21,5 @@ export interface IPersona
     municipio?: IMunicipio,
     localidad?: ILocalidad,
     apoyos?: IApoyo[],
-    
+    estudiante: boolean,
 }

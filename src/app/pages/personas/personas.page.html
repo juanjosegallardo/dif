@@ -17,6 +17,9 @@
 
   <ion-list>
     <ion-item *ngFor="let persona of personas">
+  
+        <ion-icon slot="start" name="{{persona.estudiante == 1?'school': 'person'}}" size="large"></ion-icon>
+  
       <ion-label>
         <h1>{{persona.curp}}</h1>
         <p>{{persona.ap_paterno}} {{persona.ap_materno}} {{persona.nombre}}</p>

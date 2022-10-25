@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ruta_api: "http://127.0.0.1:8000/api",
+  ruta_api: "http://192.168.2.3:8000/api",
   ruta_seimas:"https://seimas.guanajuato.gob.mx/WS/SEG/model.php"
 };
 
